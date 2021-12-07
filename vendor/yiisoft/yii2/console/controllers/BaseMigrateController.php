@@ -37,7 +37,7 @@ abstract class BaseMigrateController extends Controller
      */
     public $defaultAction = 'up';
     /**
-     * @var string|array the directory containing the migration classes. This can be either
+     * @var string|array|null the directory containing the migration classes. This can be either
      * a [path alias](guide:concept-aliases) or a directory path.
      *
      * Migration classes located at this path should be declared without a namespace.
@@ -632,7 +632,7 @@ abstract class BaseMigrateController extends Controller
      * For example:
      *
      * ```
-     * yii migrate/create 'app\\migrations\\createUserTable'
+     * yii migrate/create app\\migrations\\createUserTable
      * ```
      *
      * In case [[migrationPath]] is not set and no namespace is provided, the first entry of [[migrationNamespaces]] will be used.
