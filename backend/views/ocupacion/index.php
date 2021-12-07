@@ -6,6 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\OcupacionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/*                                                         */
 
 $this->title = 'Ocupaciones';
 $this->params['breadcrumbs'][] = $this->title;
