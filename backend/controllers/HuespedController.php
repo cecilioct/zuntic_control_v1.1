@@ -67,6 +67,7 @@ class HuespedController extends Controller
     public function actionCreate()
     {
         $model = new Huesped();
+        
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
