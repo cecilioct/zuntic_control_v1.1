@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Huesped */
 
-$this->title = 'Create Huesped';
-$this->params['breadcrumbs'][] = ['label' => 'Huespeds', 'url' => ['index']];
+$this->title = 'Crear Huesped';
+$this->params['breadcrumbs'][] = ['label' => 'Huespedes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="huesped-create">
