@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "user".
@@ -88,4 +89,13 @@ class User extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Rol::className(), ['id' => 'id_rol']);
     }
+
+    public function getRolesList()
+{
+    $roles = Rol::find()->all();
+
+    $rolesList = ArrayHelper::map($roles, 'id', 'description');
+
+    return $rolesList;
+}
 }

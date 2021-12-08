@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_rol')->textInput() ?>
+    <?= $form->field($model, 'id_rol')->dropDownList($model->getRolesList(), ['prompt'=>'Selecciona un rol']) ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 
