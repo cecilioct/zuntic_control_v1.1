@@ -90,12 +90,13 @@ class User extends \yii\db\ActiveRecord
         return $this->hasOne(Rol::className(), ['id' => 'id_rol']);
     }
 
-    public function getRolesList()
-{
-    $roles = Rol::find()->all();
+   public function getRolesList()
+   {
+     $roles = Rol::find()->all();
 
-    $rolesList = ArrayHelper::map($roles, 'id', 'description');
+     $rolesList = ArrayHelper::map($roles, 'id', 'nombre');
 
-    return $rolesList;
-}
+     return $rolesList;
+   }
+
 }
