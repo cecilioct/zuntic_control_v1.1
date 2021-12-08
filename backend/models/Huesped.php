@@ -3,6 +3,10 @@
 namespace backend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior; 
+use yii\behaviors\BlameableBehavior; 
+use yii\db\Expression;
+use common\models\User;
 
 /**
  * This is the model class for table "huesped".
@@ -38,13 +42,29 @@ class Huesped extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'telefono', 'correo', 'id_habitacion', 'id_estancia', 'creado_el', 'actualizado_el', 'creado_por', 'actualizado_por'], 'required'],
+            [['nombre', 'telefono', 'correo', 'id_habitacion', 'id_estancia'], 'required'],
             [['id_habitacion', 'id_estancia', 'creado_por', 'actualizado_por'], 'integer'],
             [['creado_el', 'actualizado_el'], 'safe'],
             [['nombre', 'correo'], 'string', 'max' => 255],
             [['telefono'], 'string', 'max' => 15],
             [['id_estancia'], 'exist', 'skipOnError' => true, 'targetClass' => Estancia::className(), 'targetAttribute' => ['id_estancia' => 'id']],
             [['id_habitacion'], 'exist', 'skipOnError' => true, 'targetClass' => Habitacion::className(), 'targetAttribute' => ['id_habitacion' => 'id']],
+        ];
+    }
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'creado_el',
+                'updatedAtAttribute' => 'actualizado_el',
+                'value' => new Expression('NOW()'),
+            ],
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'creado_por',
+                'updatedByAttribute' => 'actualizado_por',
+            ],
         ];
     }
 
@@ -96,4 +116,12 @@ class Huesped extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Habitacion::className(), ['id' => 'id_habitacion']);
     }
+
+    public function getUserName($id) 
+    { 
+        $user = User::findIdentity($id);
+
+        return $user->username; 
+    }
+    
 }
