@@ -31,6 +31,8 @@ class Estancia extends \yii\db\ActiveRecord
         return [
             [['fecha_entrada', 'fecha_salida'], 'required'],
             [['fecha_entrada', 'fecha_salida'], 'safe'],
+            [['fecha_entrada'], 'date', 'format'=>'Y-m-d'],
+            [['fecha_entrada'], 'date', 'format'=>'Y-m-d'],
         ];
     }
 

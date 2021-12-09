@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\jui\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Estancia */
@@ -12,12 +13,26 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'fecha_entrada')->textInput() ?>
+    <?php echo $form->field($model,'fecha_entrada')->
+    widget(\yii\jui\DatePicker::className(),[
+        'options' => ['class' => 'form-control'],
+        'dateFormat' => 'yyyy-MM-dd',
+        'clientOptions' => [
+            'yearRange' => '-115:+0',
+            'changeYear' => true]
+    ]) ?>
 
-    <?= $form->field($model, 'fecha_salida')->textInput() ?>
+    <?php echo $form->field($model,'fecha_salida')->
+    widget(\yii\jui\DatePicker::className(),[
+        'options' => ['class' => 'form-control'],
+        'dateFormat' => 'yyyy-MM-dd',
+        'clientOptions' => [
+            'yearRange' => '-115:+0',
+            'changeYear' => true]
+    ]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
