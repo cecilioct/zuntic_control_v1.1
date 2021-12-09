@@ -226,12 +226,7 @@ class Controller extends \yii\base\Controller
                 }
                 $args[] = $actionParams[$key] = $params[$key];
                 unset($params[$key]);
-            } elseif (
-                PHP_VERSION_ID >= 70100
-                && ($type = $param->getType()) !== null
-                && $type instanceof \ReflectionNamedType
-                && !$type->isBuiltin()
-            ) {
+            } elseif (PHP_VERSION_ID >= 70100 && ($type = $param->getType()) !== null && !$type->isBuiltin()) {
                 try {
                     $this->bindInjectedParams($type, $name, $args, $requestedParams);
                 } catch (\yii\base\Exception $e) {
@@ -321,7 +316,6 @@ class Controller extends \yii\base\Controller
      * ```
      *
      * @param string $string the string to print
-     * @param int ...$args additional parameters to decorate the output
      * @return int|bool Number of bytes printed or false on error
      */
     public function stderr($string)

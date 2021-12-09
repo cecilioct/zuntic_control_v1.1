@@ -218,7 +218,7 @@ class Request extends \yii\base\Request
      * If the list contains the `Forwarded` header, processing will be done according to RFC 7239.
      * The match of header names is case-insensitive.
      * @see https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
-     * @see https://datatracker.ietf.org/doc/html/rfc7239
+     * @see https://tools.ietf.org/html/rfc7239
      * @see $trustedHosts
      * @since 2.0.13
      */
@@ -554,7 +554,7 @@ class Request extends \yii\base\Request
      * Request parameters are determined using the parsers configured in [[parsers]] property.
      * If no parsers are configured for the current [[contentType]] it uses the PHP function `mb_parse_str()`
      * to parse the [[rawBody|request body]].
-     * @return array|object the request parameters given in the request body.
+     * @return array the request parameters given in the request body.
      * @throws \yii\base\InvalidConfigException if a registered parser does not implement the [[RequestParserInterface]].
      * @see getMethod()
      * @see getBodyParam()
@@ -723,7 +723,7 @@ class Request extends \yii\base\Request
      *
      * By default this value is based on the user request information. This method will
      * return the value of `$_SERVER['HTTP_HOST']` if it is available or `$_SERVER['SERVER_NAME']` if not.
-     * You may want to check out the [PHP documentation](https://www.php.net/manual/en/reserved.variables.server.php)
+     * You may want to check out the [PHP documentation](https://secure.php.net/manual/en/reserved.variables.server.php)
      * for more information on these variables.
      *
      * You may explicitly specify it by setting the [[setHostInfo()|hostInfo]] property.

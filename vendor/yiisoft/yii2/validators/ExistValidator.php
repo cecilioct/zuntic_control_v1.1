@@ -133,9 +133,7 @@ class ExistValidator extends Validator
 
         $connection = $model::getDb();
         if ($this->forceMasterDb && method_exists($connection, 'useMaster')) {
-            $exists = $connection->useMaster(function() use ($relationQuery) {
-                return $relationQuery->exists();
-            });
+            $exists = $connection->useMaster([$relationQuery, 'exists']);
         } else {
             $exists = $relationQuery->exists();
         }

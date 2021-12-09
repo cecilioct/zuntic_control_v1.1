@@ -8,7 +8,6 @@
 namespace yii\i18n;
 
 use Yii;
-use yii\base\InvalidArgumentException;
 
 /**
  * GettextMessageSource represents a message source that is based on GNU Gettext.
@@ -33,19 +32,19 @@ class GettextMessageSource extends MessageSource
     const PO_FILE_EXT = '.po';
 
     /**
-     * @var string base directory of messages files
+     * @var string
      */
     public $basePath = '@app/messages';
     /**
-     * @var string sub-directory of messages files
+     * @var string
      */
     public $catalog = 'messages';
     /**
-     * @var bool whether to use generated MO files
+     * @var bool
      */
     public $useMoFile = true;
     /**
-     * @var bool whether to use big-endian when reading and writing an integer
+     * @var bool
      */
     public $useBigEndian = false;
 
@@ -130,10 +129,6 @@ class GettextMessageSource extends MessageSource
      */
     protected function getMessageFilePath($language)
     {
-        $language = (string) $language;
-        if ($language !== '' && !preg_match('/^[a-z_-]+$/i', $language)) {
-            throw new InvalidArgumentException(sprintf('Invalid language code: "%s".', $language));
-        }
         $messageFile = Yii::getAlias($this->basePath) . '/' . $language . '/' . $this->catalog;
         if ($this->useMoFile) {
             $messageFile .= self::MO_FILE_EXT;
