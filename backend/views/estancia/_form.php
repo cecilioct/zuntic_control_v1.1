@@ -14,7 +14,7 @@ use yii\jui\DatePicker;
     <?php $form = ActiveForm::begin(); ?>
 
     <?php echo $form->field($model,'fecha_entrada')->
-    widget(\yii\jui\DatePicker::className(),[
+    widget(DatePicker::className(),[
         'options' => ['class' => 'form-control'],
         'dateFormat' => 'yyyy-MM-dd',
         'clientOptions' => [
@@ -23,7 +23,7 @@ use yii\jui\DatePicker;
     ]) ?>
 
     <?php echo $form->field($model,'fecha_salida')->
-    widget(\yii\jui\DatePicker::className(),[
+    widget(DatePicker::className(),[
         'options' => ['class' => 'form-control'],
         'dateFormat' => 'yyyy-MM-dd',
         'clientOptions' => [
