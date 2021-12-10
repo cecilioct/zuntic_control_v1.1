@@ -7,7 +7,8 @@ use backend\models\search\CuentaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\models\Huesped;
+use yii\web\ForbiddenHttpException;
 /**
  * CuentaController implements the CRUD actions for Cuenta model.
  */
@@ -64,9 +65,11 @@ class CuentaController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id_huesped)
     {
+        $this->loadHuesped($id_huesped);
         $model = new Cuenta();
+        $model->id_huesped = $id_huesped;
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -129,5 +132,14 @@ class CuentaController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function loadHuesped($id_huesped)
+    {
+        if (($model = Huesped::findOne($id_huesped)) !== null) {
+            return $model;
+        } else {
+            throw new ForbiddenHttpException('Debes seleccionar un huesped valido.');
+        }
     }
 }
