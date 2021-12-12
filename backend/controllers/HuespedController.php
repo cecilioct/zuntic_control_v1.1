@@ -7,6 +7,7 @@ use backend\models\search\HuespedSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\search\CuentaSearch;
 
 /**
  * HuespedController implements the CRUD actions for Huesped model.
@@ -54,8 +55,13 @@ class HuespedController extends Controller
      */
     public function actionView($id)
     {
+        $searchModel = new CuentaSearch();
+        $dataProvider = $searchModel->search($this->request->queryParams, $id);
+
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -68,7 +74,6 @@ class HuespedController extends Controller
     {
         $model = new Huesped();
         
-
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
