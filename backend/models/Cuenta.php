@@ -3,6 +3,10 @@
 namespace backend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\behaviors\BlameableBehavior;
+use yii\db\Expression;
+use common\models\User;
 
 /**
  * This is the model class for table "cuenta".
@@ -43,6 +47,23 @@ class Cuenta extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'creado_el',
+                'updatedAtAttribute' => 'actualizado_el',
+                'value' => new Expression('NOW()'),
+            ],
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'creado_por',
+                'updatedByAttribute' => 'actualizado_por',
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -68,5 +89,11 @@ class Cuenta extends \yii\db\ActiveRecord
     public function getHuesped()
     {
         return $this->hasOne(Huesped::className(), ['id' => 'id_huesped']);
+    }
+
+    public function getUserName($id)
+    {
+        $user = User::findIdentity($id);
+        return $user->username;
     }
 }
