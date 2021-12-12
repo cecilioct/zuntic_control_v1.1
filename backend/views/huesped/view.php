@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
+use yii\grid\GridView;
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\Huesped */
 
@@ -46,4 +48,29 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]) ?>
+
+    <center>
+        <h1 ><strong> CUENTAS DEL HUESPED </strong> </h1>
+    </center>
+
+    <?= Html::a('Añadir cuenta', ['cuenta/create', 'id_huesped' => $model->id], ['class' => 'btn btn-success']) ?>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'concepto',
+            'monto',
+            'id_huesped',
+            'creado_el',
+            //'actualizado_el',
+            //'creado_por',
+            //'actualizado_por',
+
+            ['class' => 'yii\grid\ActionColumn', 'controller' => 'cuenta'],
+        ],
+    ]); ?>
 </div>

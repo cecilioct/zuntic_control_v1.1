@@ -41,7 +41,10 @@ class CuentaSearch extends Cuenta
      */
     public function search($params)
     {
-        $query = Cuenta::find();
+        if ($id_huesped)
+            $query = Cuenta::find()->where(['id_huesped' => $id_huesped]);
+        else
+            $query = Cuenta::find();
 
         // add conditions that should always apply here
 
