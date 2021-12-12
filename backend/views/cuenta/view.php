@@ -35,8 +35,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_huesped',
             'creado_el',
             'actualizado_el',
-            'creado_por',
-            'actualizado_por',
+            [
+                'label' => 'Creado por',
+                'value' => $model->getUserName($model->creado_por)
+            ],
+            [
+                'label' => 'Actualizado por',
+                'value' => $model->getUserName($model->actualizado_por)
+            ],
         ],
     ]) ?>
 
