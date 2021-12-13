@@ -64,9 +64,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'concepto',
             'monto',
-            'id_huesped',
+            //'id_huesped',
             'creado_el',
-            //'actualizado_el',
+            'actualizado_el',
             //'creado_por',
             //'actualizado_por',
 

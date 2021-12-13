@@ -38,13 +38,13 @@ class Cuenta extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['concepto', 'monto', 'id_huesped', 'creado_el', 'actualizado_el', 'creado_por', 'actualizado_por'], 'required'],
+            [['concepto', 'monto', 'id_huesped',], 'required'],
             [['monto'], 'number'],
             [['id_huesped', 'creado_por', 'actualizado_por'], 'integer'],
             [['creado_el', 'actualizado_el'], 'safe'],
             [['concepto'], 'string', 'max' => 255],
             [['id_huesped'], 'exist', 'skipOnError' => true, 'targetClass' => Huesped::className(), 'targetAttribute' => ['id_huesped' => 'id']],
-        ];
+        ];    
     }
 
     public function behaviors()

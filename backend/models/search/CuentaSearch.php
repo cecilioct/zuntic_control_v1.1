@@ -39,7 +39,7 @@ class CuentaSearch extends Cuenta
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $id_huesped = null)
     {
         if ($id_huesped)
             $query = Cuenta::find()->where(['id_huesped' => $id_huesped]);
