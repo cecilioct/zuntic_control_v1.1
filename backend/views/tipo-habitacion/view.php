@@ -1,5 +1,5 @@
 <?php
-
+use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
@@ -36,5 +36,19 @@ $this->params['breadcrumbs'][] = $this->title;
             'planta',
         ],
     ]) ?>
+    <?= Html::a('registrar habitacion', ['habitacion/create', 'id_tipo_habitacion' => $model->id], ['class' => 'btn btn-success']) ?>
 
 </div>
+<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'id_tipo_habitacion',
+            'id_estado',
+
+            ['class' => 'yii\grid\ActionColumn','controller' => 'habitacion'],
+        ],
+    ]); ?>
