@@ -10,10 +10,15 @@ use yii\bootstrap4\ActiveForm;
 $this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<body style= "background-color: orange">
+    
+    </body>
+    
 <div class="site-signup">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to signup:</p>
+    <p>Por favor, llena los campos para continuar:</p>
 
     <div class="row">
         <div class="col-lg-5">
@@ -26,9 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'password')->passwordInput() ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                    <?= Html::submitButton('Crear', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?><img src="../../imagenes/usuario.png" style="width:90%;margin-left:130%;margin-top:-350px;" >
                 </div>
-
+                
             <?php ActiveForm::end(); ?>
         </div>
     </div>

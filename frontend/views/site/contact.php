@@ -11,11 +11,12 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<body style= "background-color: lightgreen">
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+        Si tienes asuntos de negocios o preguntas, favor de llenar el formulario para contactarnos. Gracias.
     </p>
 
     <div class="row">
@@ -35,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?><img src="../../imagenes/contacto3.png" style="width:90%;margin-left:130%;margin-top:-620px;" >
                 </div>
 
             <?php ActiveForm::end(); ?>
