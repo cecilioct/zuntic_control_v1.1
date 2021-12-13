@@ -1,7 +1,8 @@
 <?php
 
 namespace backend\controllers;
-
+use backend\models\search\HabitacionSearch;
+use Yii;
 use backend\models\TipoHabitacion;
 use backend\models\search\TipoHabitacionSearch;
 use yii\web\Controller;
@@ -53,11 +54,16 @@ class TipoHabitacionController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
+{
+ $searchModel = new HabitacionSearch();
+ $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$id);
+ return $this->render('view', [
+ 'model' => $this->findModel($id),
+ 'searchModel' => $searchModel,
+ 'dataProvider' => $dataProvider,
+ ]);
+}
+
 
     /**
      * Creates a new TipoHabitacion model.
