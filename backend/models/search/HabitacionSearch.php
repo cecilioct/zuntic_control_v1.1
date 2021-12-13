@@ -37,9 +37,12 @@ class HabitacionSearch extends Habitacion
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $id_tipo_habitacion  = null)
     {
-        $query = Habitacion::find();
+        if ($id_tipo_habitacion)
+         $query = Habitacion::find()->where(['id_tipo_habitacion' => $id_tipo_habitacion ]);
+        else
+         $query = Habitacion::find();
 
         // add conditions that should always apply here
 
