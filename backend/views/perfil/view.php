@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\models\Nombre;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Perfil */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Perfils', 'url' => ['index']];
+$this->title = $model->nombre;
+$this->params['breadcrumbs'][] = ['label' => 'Perfiles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -20,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Seguro que desea eliminar este usuario?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -35,6 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'telefono',
             'sexo',
             'id_user',
+          
+          
         ],
     ]) ?>
 
