@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="habitacion-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+     
     <?= $form->field($model, 'id_tipo_habitacion')->textInput() ?>
 
     <?= $form->field($model, 'id_estado')->textInput() ?>
