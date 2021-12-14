@@ -14,18 +14,20 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="tipo-habitacion-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <center>
+        <h1 ><strong> INFORMACION DEL TIPO DE CUARTO </strong> </h1>
+    </center>
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('actualizar informacion', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('eliminar informacion', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'seguro que quieres borrar la informacion?',
                 'method' => 'post',
             ],
         ]) ?>
     </p>
-
+    
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -36,6 +38,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'planta',
         ],
     ]) ?>
+    <center>
+        <h1 ><strong> INFORMACION DE LA HABITACION </strong> </h1>
+    </center>
     <?= Html::a('registrar habitacion', ['habitacion/create', 'id_tipo_habitacion' => $model->id], ['class' => 'btn btn-success']) ?>
 
 </div>
