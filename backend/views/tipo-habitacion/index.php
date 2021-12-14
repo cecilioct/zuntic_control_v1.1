@@ -7,14 +7,15 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\search\TipoHabitacionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tipo Habitacions';
+$this->title = 'Tipo Habitaciones';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tipo-habitacion-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <img src="../../imagenes/tiposh.jpg" style="width:20%"><style> img{margin-left: 0%;}</style>
 
-    <p>
+    <p><br>
         <?= Html::a('Create Tipo Habitacion', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 

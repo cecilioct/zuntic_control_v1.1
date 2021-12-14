@@ -13,9 +13,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="cuenta-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create Cuenta', ['create'], ['class' => 'btn btn-success']) ?>
+    <img src="../../imagenes/cuenta.jpg" style="width:20%"><style> img{margin-left: 0%;}</style>
+    
+    <p><br>
+        <?= Html::a('Crear Cuenta', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

@@ -14,7 +14,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
+    <img src="../../imagenes/usuariou.png" style="width:20%"><style> img{margin-left: -4%;}</style>
+
+    <p><br>
         <?= Html::a('Crear Usuario', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 

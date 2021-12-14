@@ -7,14 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\search\RolSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Rols';
+$this->title = 'Roles';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rol-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
+    <img src="../../imagenes/roles.jpg" style="width:20%"><style> img{margin-left: 0%;}</style>
+
+    <p><br>
         <?= Html::a('Crear Rol', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 

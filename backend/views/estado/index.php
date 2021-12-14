@@ -13,8 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="estado-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <img src="../../imagenes/estado.jpg" style="width:20%"><style> img{margin-left: 0%;}</style>
 
-    <p>
+    <p><br>
         <?= Html::a('Create Estado', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
