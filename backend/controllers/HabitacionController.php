@@ -7,7 +7,8 @@ use backend\models\search\HabitacionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\models\TipoHabitacion;
+use backend\models\search\TipoHabitacionSearch;
 /**
  * HabitacionController implements the CRUD actions for Habitacion model.
  */
@@ -64,9 +65,11 @@ class HabitacionController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id_tipo_habitacion)
     {
+        $this->loadTipoHabitacion($id_tipo_habitacion);
         $model = new Habitacion();
+        $model->id_tipo_habitacion = $id_tipo_habitacion;
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -130,4 +133,13 @@ class HabitacionController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    public function loadTipoHabitacion($id_tipo_habitacion)
+{
+ if (($model = TipoHabitacion::findOne($id_tipo_habitacion)) !== null) {
+ return $model;
+ } else {
+ throw new ForbiddenHttpException('You must select a valid
+project.');
+ }
+}
 }
