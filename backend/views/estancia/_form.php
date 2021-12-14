@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\jui\DatePicker;
+use kartik\datetime\DateTimePicker;
+use kartik\icons\FontAwesomeAsset;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Estancia */
@@ -13,23 +14,21 @@ use yii\jui\DatePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php echo $form->field($model,'fecha_entrada')->
-    widget(\yii\jui\DatePicker::className(),[
-        'options' => ['class' => 'form-control'],
-        'dateFormat' => 'yyyy-MM-dd',
-        'clientOptions' => [
-            'yearRange' => '-115:+0',
-            'changeYear' => true]
-    ]) ?>
+    <?php
+    echo $form->field($model, 'fecha_entrada')->widget(DateTimePicker::classname(), [
+        'options' => ['placeholder' => 'Ingrese la fecha de entrada ...'],
+        'pluginOptions' => [
+            'autoclose' => true
+        ]
+    ]);?>
 
-    <?php echo $form->field($model,'fecha_salida')->
-    widget(\yii\jui\DatePicker::className(),[
-        'options' => ['class' => 'form-control'],
-        'dateFormat' => 'yyyy-MM-dd',
-        'clientOptions' => [
-            'yearRange' => '-115:+0',
-            'changeYear' => true]
-    ]) ?>
+    <?php
+    echo $form->field($model, 'fecha_salida')->widget(DateTimePicker::classname(), [
+        'options' => ['placeholder' => 'Ingrese la fecha de salida ...'],
+        'pluginOptions' => [
+            'autoclose' => true
+        ]
+    ]);?>
 
     <div class="form-group">
         <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
