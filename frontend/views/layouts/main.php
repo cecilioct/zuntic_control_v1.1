@@ -28,21 +28,38 @@ AppAsset::register($this);
 <header>
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => "ZUNTIC CONTROL",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Inicio', 'url' => ['/site/index']],
+        ['label' => 'Acerca', 'url' => ['/site/about']],
+        ['label' => 'Contacto', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = [
+            'label' => 'Catalogos', 'url' => ['site/index'],
+            'options' =>['class' =>'dropdown'],
+            'template'=>'<a href="{url}" class="href_class">{label}</a>',
+            'items' =>[ 
+                        ['label' => 'Huespedes', 'url' => ['huesped/index']],
+                        ['label' => 'Cuentas', 'url' => ['cuenta/index']],
+                        ['label' => 'Estancia', 'url' => ['estancia/index']],
+                        ['label' => 'Habitaciones', 'url' => ['habitacion/index']],
+                        ['label' => 'Tipo de habitaciones', 'url' => ['tipo-habitacion/index']],   
+                        ['label' => 'Estado', 'url' => ['estado/index']],
+                        ['label' => 'Limpieza', 'url' => ['limpieza/index']],
+                        ['label' => 'Ocupacion', 'url' => ['ocupacion/index']],                    
+                        ['label' => 'Perfiles', 'url' => ['perfil/index']],                                      
+                    ],
+        ];
+
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
             . Html::submitButton(
@@ -72,7 +89,7 @@ AppAsset::register($this);
 
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
-        <p class="float-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="float-left">&copy; <?= Html::encode("ZUNTIC CONTROL") ?> <?= date('Y') ?></p>
         <p class="float-right"><?= Yii::powered() ?></p>
     </div>
 </footer>

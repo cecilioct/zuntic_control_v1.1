@@ -21,12 +21,5 @@ $this->title = 'Zuntic Control';
         <style> h1{margin-left: 18%;margin-top:-8px;color: white;}.form-inline,.hola{color: white;}</style>
         <style> h2{margin-left: 38%;margin-top:-8px;color: white;}.form-inline,.hola{color: white;}</style>
 
-    <footer class="container-fluid text-center">
-        <a href="#"><p class="hola">@Copyright</p>  </a>
-        <form class="form-inline">Conoce nuestras ofertas:
-        <input type="email" class="form-control" size="50" placeholder="Escribe tu correo electronico">
-        <button type="button" class="btn btn-danger">Registrate</button>
-        </form>
-    </footer
 
 </div>
