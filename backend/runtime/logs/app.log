@@ -12377,3 +12377,1820 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1639504076.6356
     'REQUEST_TIME' => 1639504076
 ]
+2021-12-14 18:12:55 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`)) in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php:1302
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1302): PDOStatement->execute()
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('10')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+The SQL being executed was: DELETE FROM `habitacion` WHERE `id`=10 in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `ha...')
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('10')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+)
+
+2021-12-14 18:12:55 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'habitacion/delete'
+    'id' => '10'
+]
+
+$_POST = [
+    '_csrf-backend' => 'kHmPKcUDLYS1pYDfLIH4UvQJMIIq_w0SlhhUI9wrG7n2Nf9fimZVzvrI14pJ1as4unNEt2zNZHmiLWJ0tEhc9A=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '56972'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=habitacion%2Fdelete&id=10'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fdelete&id=10'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639505575.9167
+    'REQUEST_TIME' => 1639505575
+]
+2021-12-14 18:30:57 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('19')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('19')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:30:57 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '19'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52437'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=19'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=19'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506657.1704
+    'REQUEST_TIME' => 1639506657
+]
+2021-12-14 18:31:13 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('20')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('20')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:31:13 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52446'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=20'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=20'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506673.1582
+    'REQUEST_TIME' => 1639506673
+]
+2021-12-14 18:31:27 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('20')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('20')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:31:27 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=20'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=20'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506687.5279
+    'REQUEST_TIME' => 1639506687
+]
+2021-12-14 18:31:28 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('20')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('20')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:31:28 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=20'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=20'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506688.3962
+    'REQUEST_TIME' => 1639506688
+]
+2021-12-14 18:31:29 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('20')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('20')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:31:29 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=20'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=20'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506689.0838
+    'REQUEST_TIME' => 1639506689
+]
+2021-12-14 18:32:17 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('20')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('20')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:32:17 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52473'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=20'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=20'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506737.314
+    'REQUEST_TIME' => 1639506737
+]
+2021-12-14 18:32:37 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:32:37 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52479'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506757.4822
+    'REQUEST_TIME' => 1639506757
+]
+2021-12-14 18:32:59 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:32:59 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506779.4533
+    'REQUEST_TIME' => 1639506779
+]
+2021-12-14 18:33:00 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:00 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506780.2344
+    'REQUEST_TIME' => 1639506780
+]
+2021-12-14 18:33:00 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:00 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506780.9437
+    'REQUEST_TIME' => 1639506780
+]
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506781.5437
+    'REQUEST_TIME' => 1639506781
+]
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506781.7758
+    'REQUEST_TIME' => 1639506781
+]
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:01 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52496'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506781.9284
+    'REQUEST_TIME' => 1639506781
+]
+2021-12-14 18:33:02 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php:137
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\TipoHabitacionController.php(61): backend\controllers\TipoHabitacionController->findModel('21')
+#1 [internal function]: backend\controllers\TipoHabitacionController->actionView('21')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#6 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-12-14 18:33:02 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+    'id' => '21'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate&id_tipo_habitacion=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52496'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview&id=21'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview&id=21'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639506782.0795
+    'REQUEST_TIME' => 1639506782
+]
+2021-12-14 18:38:05 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`)) in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php:1302
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1302): PDOStatement->execute()
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('14')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+The SQL being executed was: DELETE FROM `habitacion` WHERE `id`=14 in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `ha...')
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('14')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+)
+
+2021-12-14 18:38:05 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'habitacion/delete'
+    'id' => '14'
+]
+
+$_POST = [
+    '_csrf-backend' => 'znN5nmLtPlMEkAY1CgUtbWRKeJDkZT7TMLYOEwo_TuSoPwnoLYhGGUv9UWBvUX4HKjAMpaJXV7gEgzhEYlwJqQ=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52025'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=habitacion%2Fdelete&id=14'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fdelete&id=14'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507085.1286
+    'REQUEST_TIME' => 1639507085
+]
+2021-12-14 18:38:14 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`)) in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php:1302
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1302): PDOStatement->execute()
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('14')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+The SQL being executed was: DELETE FROM `habitacion` WHERE `id`=14 in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `ha...')
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('DELETE FROM `ha...')
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(401): yii\db\Command->execute()
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(761): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\db\ActiveRecord.php(720): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\controllers\HabitacionController.php(116): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\HabitacionController->actionDelete('14')
+#7 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/dele...', Array)
+#11 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`bd_v2.1`.`huesped`, CONSTRAINT `huesped_ibfk_4` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`))
+)
+
+2021-12-14 18:38:14 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'habitacion/delete'
+    'id' => '14'
+]
+
+$_POST = [
+    '_csrf-backend' => 'JgoLblfQWZ-nC51dYGXgVKLXjpfo8Zgtp4E53Wqck-FARnsYGLUh1ehmyggFMbM-7K36oq7D8UaTtA-KAv_UrA=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=habitacion%2Fdelete&id=14'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fdelete&id=14'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507094.7915
+    'REQUEST_TIME' => 1639507094
+]
+2021-12-14 18:38:21 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id_tipo_habitacion in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Controller.php:196
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('create', Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('habitacion/crea...', Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2021-12-14 18:38:21 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'habitacion/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52036'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=habitacion%2Fcreate'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Fcreate'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507101.799
+    'REQUEST_TIME' => 1639507101
+]
+2021-12-14 18:38:43 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Controller.php:196
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2021-12-14 18:38:42 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex&id=23'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52053'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507122.9883
+    'REQUEST_TIME' => 1639507122
+]
+2021-12-14 18:39:13 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Controller.php:196
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2021-12-14 18:39:13 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex&id=23'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52065'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507153.0183
+    'REQUEST_TIME' => 1639507153
+]
+2021-12-14 18:39:14 [::1][10][23gv4pk84f521smilur03i5i7v][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Controller.php:196
+Stack trace:
+#0 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#2 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#3 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('tipo-habitacion...', Array)
+#4 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\wamp64\wamp64\wamp64\www\zuntic_control_v1.1\backend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2021-12-14 18:39:14 [::1][10][23gv4pk84f521smilur03i5i7v][info][application] $_GET = [
+    'r' => 'tipo-habitacion/view'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '23gv4pk84f521smilur03i5i7v'
+    '_identity-backend' => 'dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ\",2592000]\";}'
+    '_csrf-backend' => '59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"fLpvOexJOmWUeTSjNzt5F2ik456WhcGM\";}'
+    '_csrf-frontend' => '61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx\";}'
+    'advanced-frontend' => 'opqsuv74b2nmljsl3qd2s56p8r'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/yii-application/backend/web/index.php?r=project%2Findex'
+    '__id' => 10
+    '__authKey' => 'EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Opera GX\";v=\"81\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"95\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/zuntic_control_v1.1/backend/web/index.php?r=habitacion%2Findex&id=23'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=23gv4pk84f521smilur03i5i7v; _identity-backend=dfa7b9a68fcbb5683e2fd60f0efb2c0ce47f02373608498d6cad8242a0d24952a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22EA4w1b_c7AjH5kvsTHn96bMfqqxf7ZwQ%22%2C2592000%5D%22%3B%7D; _csrf-backend=59d06548d4e01076ade250bd26c760b3d3d35138002ab994e679ab1e9c71edb9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22fLpvOexJOmWUeTSjNzt5F2ik456WhcGM%22%3B%7D; _csrf-frontend=61263c2f68d4048426b0dcea1c44b6c47f468789ab3ab44b09502712109ce8d9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Oj7gSxJ9QuM9ytrSQ-l8fvt3hl8KQMFx%22%3B%7D; advanced-frontend=opqsuv74b2nmljsl3qd2s56p8r'
+    'PATH' => 'C:\\Program Files\\CollabNet\\Subversion Client;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\CivilCAD 2020;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\omar_\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\omar_\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\omar_\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\wamp64\\wamp64\\bin\\php\\php7.4.9;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\IBM\\SPSS\\Statistics\\22\\JRE\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/wamp64/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/wamp64/wamp64/www/zuntic_control_v1.1/backend/web/index.php'
+    'REMOTE_PORT' => '52066'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tipo-habitacion%2Fview'
+    'REQUEST_URI' => '/zuntic_control_v1.1/backend/web/index.php?r=tipo-habitacion%2Fview'
+    'SCRIPT_NAME' => '/zuntic_control_v1.1/backend/web/index.php'
+    'PHP_SELF' => '/zuntic_control_v1.1/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639507154.0519
+    'REQUEST_TIME' => 1639507154
+]
